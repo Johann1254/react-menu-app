@@ -40,17 +40,25 @@ export default function Configuracion() {
       <h2 style={titleStyle}>Configuración del Sistema</h2>
       <form>
         <div style={formGroup}>
-          <label style={labelStyle}>Tema:</label>
-          <select style={inputStyle}>
-            <option>Claro</option>
-            <option>Oscuro</option>
-          </select>
+          <label style={labelStyle}>Color del Tema:</label>
+          <input type="color" style={{ ...inputStyle, padding: '4px' }} />
         </div>
+
+        <div style={formGroup}>
+          <label style={labelStyle}>Correo de notificaciones:</label>
+          <input type="email" placeholder="ejemplo@correo.com" style={inputStyle} />
+        </div>
+
         <div style={formGroup}>
           <label style={labelStyle}>
             <input type="checkbox" style={{ marginRight: '8px' }} />
             Activar notificaciones
           </label>
+        </div>
+
+        <div style={formGroup}>
+          <label style={labelStyle}>Frecuencia de notificación:</label>
+          <input type="number" min="1" max="30" placeholder="Días" style={inputStyle} />
         </div>
       </form>
     </div>
